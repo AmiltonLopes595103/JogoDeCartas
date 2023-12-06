@@ -1,0 +1,167 @@
+namespace Teste{
+
+    class Aplication
+    {
+        public static void Main(String[] args)
+        {
+            //OBS: o contador tem de receber o o indice do próprio numero que esta sendo comparado (1) o numero que for igual a posição(2)
+            //e se tiver um proximo numero igual a posição(3);
+
+            //se noao for igual o contador recebe somento o numero que esta sendo compárado (1)
+            int cont=0;
+            int vezes = 0;
+            
+
+
+            int[] numeros1 = new int[3];
+            int[] quantidade = new int[3];
+            int[] posicoes = new int[3];
+            int[] resultado = new int[3];
+            int valor, aux,k;
+            int contVezes=0;
+
+            for (int i = 0; i<3; i++)//preencher o vetor
+            {
+
+                Console.WriteLine("Informe o numero na :" + i + " posição");
+                numeros1[i] = int.Parse(Console.ReadLine());
+
+
+
+
+            }
+            for (int t = 0; t < 3; t++)
+            {
+
+               Console.WriteLine("numeros1: " + numeros1[t]);
+
+
+
+            }
+
+          
+          
+                    //while (contVezes < 3)
+                   // {
+
+
+
+                        Console.WriteLine();
+                        for (int j = 0; j < 3; j++)//fazer as comparações
+                        {
+                            Console.WriteLine("Indice J: " + j);
+
+
+                            k = 0;
+                            Console.WriteLine("Indice K: " + k);
+
+                            
+                            if (numeros1[k] == numeros1[j])
+                            {
+                                
+                                resultado[k] = numeros1[k];
+                              
+
+                                posicoes[j] = j;
+                                cont =cont+1;//o numero foi encontrado pelo menos uma vez
+                                quantidade[k] = cont;
+
+
+                        }
+                        else
+                            {
+                                resultado[j] = numeros1[j];
+                                cont = 1;//o numero foi encontrado pelo menos uma vez
+                                        
+                                quantidade[j] = cont;
+
+                            }
+
+
+
+
+
+                      
+
+                        contVezes++;//quantas vezes  o indice (j) foi executado
+                       
+
+
+
+
+                        }
+                   
+
+
+
+
+                   // }
+                Console.WriteLine("contVezes: " + contVezes);
+
+                vezes += 1;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+           
+            
+           
+           
+
+
+
+
+            Console.WriteLine();
+            for (int i =0;i<3;i++)
+            {
+                //if (resultado[i] != 0)
+               // {
+                //}
+                    Console.WriteLine("resultado:" + resultado[i]);
+
+
+                
+
+
+
+
+            }
+
+            Console.WriteLine();
+            foreach (int valores in quantidade)
+            {
+                // if (valores != 0)
+                //{
+                 //}
+                    
+
+
+                    Console.WriteLine("Qunatidade de vezes que o numero aparece: " + valores);
+                
+
+
+            }
+
+
+
+
+
+
+
+        }
+    }
+
+}
